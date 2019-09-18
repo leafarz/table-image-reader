@@ -2,7 +2,7 @@ import cv2 as cv
 import pytesseract
 
 def draw_letter_bounds(img):
-    h, _, _ = img.shape
+    h = img.shape[0]
     boxes = pytesseract.image_to_boxes(img)
 
     for b in boxes.splitlines():

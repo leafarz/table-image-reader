@@ -1,11 +1,15 @@
 # table-image-reader
 - Test project to read images with table and convert to some sheet format
 
+## Prerequisites
+- Python 3.7
+
 ## Install (Windows)
 - Create virtual environment:
 <br>`python -m venv venv`
-- Activate/Deactivate to virtual environment:
-<br>`venv\Scripts\activate.bat` OR `venv\Scripts\deactivate.bat`
+- Activate virtual environment:
+<br>`venv\Scripts\activate.bat`
+<br>`venv\Scripts\deactivate.bat` (to deactivate)
 - Install packages from requirements:
 <br>`pip install -r requirements.txt`
 - Note: Tesseract is included in this repo. If you choose to use it, you don't have to follow the next steps.
