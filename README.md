@@ -17,7 +17,7 @@
         - Install [Tesseract prebuilt binaries](https://github.com/UB-Mannheim/tesseract/wiki)
         - Add installed Tesseract directory to environment variable (ie. Tesseract-OCR folder)
         - Comment out the line which has
-        <br>`pytesseract.pytesseract.tesseract_cmd = r'./vendor/Tesseract-OCR/tesseract'`
+        <br>`pytesseract.pytesseract.tesseract_cmd = os.path.join(basedir, 'vendor/Tesseract-OCR/tesseract')`
 
 ## Tools used
 - VSCode

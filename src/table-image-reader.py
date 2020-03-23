@@ -1,3 +1,4 @@
+import os
 import cv2
 import sys
 import pytesseract
@@ -60,11 +61,13 @@ def get_roi(gray):
         return thresh[miny:maxy,minx:maxx]
 # END FUNCTIONS
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 # Use embedded tesseract
-pytesseract.pytesseract.tesseract_cmd = r'./vendor/Tesseract-OCR/tesseract'
+pytesseract.pytesseract.tesseract_cmd = os.path.join(basedir, 'vendor/Tesseract-OCR/tesseract')
 
 # for now we use a best-better case data
-filepath = './data/table_02.png'
+filepath = os.path.join(basedir, 'data/table_02.png')
 
 # Read image from disk
 img = cv2.imread(filepath)
